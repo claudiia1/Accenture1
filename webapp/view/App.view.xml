@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="accenture1.project1.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+>
+    <Shell id="shell">
+        <App id="app"/>
+    </Shell>
+</mvc:View>
