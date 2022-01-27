@@ -29,7 +29,7 @@ sap.ui.define([
                 //Common.openDialogFromFragment(this, "idSayHelloDialog", "accenture1.project1.fragment.sayHelloDialog");
                 
                 //this.getView().byId("products-table").setBusy(true);
-                const oToolsModel = this.getOwnerComponent().getModel("ToolsModel");
+                const oToolsModel = this.getOwnerComponent().getModel(Constants.model.TOOLS_MODEL);
                 console.log(oEvent.getSource().getBindingContext().sPath);
                 
 
@@ -50,7 +50,12 @@ sap.ui.define([
                 });
    
                
-            }
+            },
+            applyFilter:function(oEvent){
+                this.byId("CategoryID-combobox").getSelectedItem();
+                var selText = oEvent.getParameter("selectedItem").getText();
+                var selKey = oEvent.getParameter("selectedItem").getKey();
+             }
             
         });
 

@@ -40,6 +40,12 @@
 
     <Page id="page" title="{i18n>title}">
         <content> 
+            <HBox class="myHeaderBarGeneric">  
+                <ComboBox class="myComboBoxStyle" id="CategoryID-combobox" items="{/Products}" selectedKey="{/Products}" selectionChange="onChange">
+                    <core:Item key="{CategoryID}" text="{CategoryID}"/>
+                </ComboBox> 
+                 <Button  icon="sap-icon://filter" press="applyFilter"/>
+            </HBox>
             <Table items ="{/Products}" busy="{= ${ToolsModel>/selectedCity}===${ToolsModel>/name}}" autoPopinMode="true">
                 <columns>
                     <Column>
