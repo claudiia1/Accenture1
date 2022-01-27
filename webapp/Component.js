@@ -25,6 +25,9 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                //set language
+                //sap.ui.getCore().getConfiguration().setLenguage("es_ES");
             }
         });
     }

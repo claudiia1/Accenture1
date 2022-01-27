@@ -1,0 +1,32 @@
+<mvc:View 
+    xmlns:table="sap.ui.table"
+    controllerName="accenture1.project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+
+>
+  
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <table:Table  rows="{CitiesModel>/}">
+                <table:columns >
+                    <table:Column id="name" filterProperty="name">
+                        <Label text="City Name" />
+                        <table:template>
+                            <Text text="{CitiesModel>name}" wrapping="false" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column id="population" filterProperty="population" >
+                        <Label text="Population" />
+                        <table:template>
+                            <Text text="{path: 'CitiesModel>population', formatter:'.Formatter.formatPopulation'}" wrapping="false" />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table> 
+        </content>
+    </Page>
+           
+</mvc:View>

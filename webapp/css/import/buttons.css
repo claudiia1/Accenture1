@@ -1,0 +1,10 @@
+.myPrimaryBtn > span{
+    background-color: #610091 !important;
+    border: none;
+    color: white !important;
+}
+.myPrimaryBtn:hover > span {
+    background-color: rgb(240, 160, 236) !important;
+    border: none ;
+    color: black !important;
+}

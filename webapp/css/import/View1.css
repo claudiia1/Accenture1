@@ -1,0 +1,38 @@
+.myHeaderBarGeneric{
+    display: flex;
+    justify-content: space-around;
+}
+
+.myComboBoxStyle{
+    width: 100%;
+}
+
+.myHeaderBarGeneric  >div:nth-child(2) {
+    width: 100%;
+}
+
+.myHeaderBarGeneric  >div{
+    margin: 0 1rem 0 1rem ;
+
+}
+
+.myCustomView section{
+    position: unset !important;
+}
+.myCustomIconTab .sapMITBSelected .sapMITBContentArrow::after {
+
+    background: #610091;
+    }   
+
+.myCustomIconTab .sapMITBFilter .sapMITBText >span {
+
+    font-weight: bold;
+
+    color: black;
+
+} 
+@media only screen and (max-width:768px){
+    .myGeneralCellColor {
+        background-color: #6a6d7050;
+    }
+}

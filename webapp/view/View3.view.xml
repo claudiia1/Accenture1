@@ -1,0 +1,97 @@
+<mvc:View 
+    controllerName="accenture1.project1.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+
+>
+  
+    <!--Page id="page" title="{i18n>title}">
+        <content> 
+            <Table items ="{CitiesModel>/}">
+                <columns>
+                    <Column>
+                        <header>
+                            <Text text="City Name" />
+                        </header>    
+                        <footer/>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Text text="Population" />
+                        </header>    
+                        <footer/>
+                    </Column>
+                </columns >
+                <items>
+                    <ColumnListItem id="columnList" vAlign="Middle" type="Active" press="onPress">
+                        <cells>
+                            <Text text="{CitiesModel>name}" />
+                            <Text text="{path: 'CitiesModel>population', formatter:'.Formatter.formatPopulation'}" wrapping="false" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table> 
+        </content>
+    </Page-->
+
+
+    <Page id="page" title="{i18n>title}">
+        <content> 
+            <Table items ="{/Products}" busy="{= ${ToolsModel>/selectedCity}===${ToolsModel>/name}}" autoPopinMode="true">
+                <columns>
+                    <Column>
+                        <header>
+                            <Text text="{i18n>productName}" />
+                        </header>    
+                        <footer/>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Text text="{i18n>unitPrice}" />
+                        </header>    
+                        <footer/>
+                    </Column>
+
+                    <Column>
+                        <header>
+                            <Text text="{i18n>productID}" />
+                        </header>    
+                        <footer/>
+                    </Column>
+
+                    <Column>
+                        <header>
+                            <Text text="{i18n>supplierID}" />
+                        </header>    
+                        <footer/>
+                    </Column>
+
+                    <Column>
+                        <header>
+                            <Text text="{i18n>categoryID}" />
+                        </header>    
+                        <footer/>
+                    </Column>
+                    
+                </columns >
+                <items>
+                    <ColumnListItem id="columnList" vAlign="Middle" type="Active" press="onPress">
+                        <cells>
+                            <Text text="{ProductName}" />
+                            <Text text="{UnitPrice}" />
+                            <Text text="{ProductID}" />
+                            <Text text="{SupplierID}" />
+                            <Text text="{CategoryID}" />
+                            
+                        </cells>
+                    </ColumnListItem>
+                    
+                </items>
+            </Table> 
+        </content>
+    </Page>
+           
+</mvc:View>

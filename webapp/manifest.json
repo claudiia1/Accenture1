@@ -11,12 +11,12 @@
     "description": "{{appDescription}}",
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/",
+        "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
           "annotations": [],
           "localUri": "localService/metadata.xml",
-          "odataVersion": "4.0"
+          "odataVersion": "2.0"
         }
       }
     }
@@ -56,19 +56,19 @@
           "bundleName": "accenture1.project1.i18n.i18n"
         }
       },
+      
       "": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {
-          "synchronizationMode": "None",
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true,
-          "groupId": "$direct"
-        }
-      }
+        "settings": {}
+      }  
     },
     "resources": {
+      "js": [
+        {
+          "uri": "utils/libs/Lodash.js"
+        }
+      ],
       "css": [
         {
           "uri": "css/style.css"
@@ -88,9 +88,37 @@
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": "RouteView1",
+          "pattern": "",
           "target": [
             "TargetView1"
+          ]
+        },
+        {
+          "name": "RouteView2",
+          "pattern": "RouteView2",
+          "target": [
+            "TargetView2"
+          ]
+        },
+        {
+          "name": "RouteView3",
+          "pattern": "RouteView3",
+          "target": [
+            "TargetView3"
+          ]
+        },
+        {
+          "name": "RouteView4",
+          "pattern": "RouteView4",
+          "target": [
+            "TargetView4"
+          ]
+        },
+        {
+          "name": "RouteAutorization",
+          "pattern": "Autorization",
+          "target": [
+            "TargetAutorization"
           ]
         }
       ],
@@ -101,14 +129,51 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+
+        
+        "TargetView2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "View2"
+        },
+        
+      
+        "TargetView3": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View3",
+          "viewName": "View3"
+        }, 
+
+        "TargetView4": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View4",
+          "viewName": "View4"
         }
-      }
+      },
+      
+        
+      
+      "TargetAutorization": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "Autorization",
+        "viewName": "Autorization"
+      }  
+    
     },
     "rootView": {
-      "viewName": "accenture1.project1.view.View1",
+      "viewName": "accenture1.project1.view.App",
       "type": "XML",
       "async": true,
-      "id": "View1"
+      "id": "App"
     }
   }
 }

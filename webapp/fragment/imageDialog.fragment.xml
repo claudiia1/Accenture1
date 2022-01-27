@@ -1,0 +1,17 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:html="http://www.w3.org/1999/xhtml">
+
+<!--Ventana de dialogo que aparece cuando clickamos la foto-->
+    <Dialog title="{DetailModel>/ProductName}">
+        <Image src="data:image/bmp;base64,{= ${DetailModel>/Category/Picture}.substr(104)}" width="500px" height="500px" />
+        
+        <!--Boton para cerar la ventana del dialogo-->
+        <endButton>
+            <Button text="{i18n>close}" press="onClose"></Button>
+        </endButton>
+    </Dialog>
+
+
+</core:FragmentDefinition>
