@@ -39,6 +39,8 @@
                 </ComboBox>    
                 <Button text="{i18n>navigateToView2}" press="onNavigateToView2"></Button> 
                 <Button text="{i18n>navigateToView3}" press="onNavigateToView3"></Button> 
+                <Button text="{i18n>navigateToView5}" press="onNavigateToView5"></Button> 
+
 
                  <Button text="Español" press="onLanguageSpanish"></Button> 
                 <Button text="English" press="onLanguageEnglish"></Button> 

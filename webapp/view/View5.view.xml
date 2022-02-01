@@ -1,0 +1,56 @@
+<mvc:View
+    controllerName="accenture1.controller.View5"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    height="100%">
+
+    <Page title="Materials">
+        <content>
+            <HBox class="myHeaderBarGeneric">  
+               <ComboBox class="myComboBoxStyle" id="materialsCategory-combobox" items="{MaterialsModel>/}">
+                    <core:Item key="{MaterialsModel>category}" text="{MaterialsModel>category}"/>
+                </ComboBox> 
+                 <ComboBox class="myComboBoxStyle" id="materialsType-combobox" items="{MaterialsModel>/}">
+                    <core:Item key="{MaterialsModel>type}" text="{MaterialsModel>type}"/>
+                </ComboBox> 
+                 <Button  icon="sap-icon://filter" press="applyFilter"/>
+            </HBox>
+            <List id="MaterialsList"  mode="MultiSelect"
+                includeItemInSelection="true" 
+                selectionChange="onDeselectedItem"
+                showNoData="false">
+            </List>
+            <List  id="MainMaterialsList" items="{MaterialsModel>/}" 
+                mode="MultiSelect" growing="true" growingThreshold="50" 
+                includeItemInSelection="true" selectionChange="onSelectedItem"
+                showNoData="false">
+                <CustomListItem>
+                    <HBox>
+                        <VBox width="100%">
+                            <Label text="{MaterialsModel>category}"/>
+                        </VBox>
+                        <VBox width="100%">
+                            <Label text="{MaterialsModel>type}"/>
+                        </VBox>
+                        <VBox width="100%">
+                            <Label text="{MaterialsModel>format}"/>
+                        </VBox>
+                        <VBox width="100%">
+                            <Label text="{MaterialsModel>paper}"/>
+                        </VBox>
+                        <VBox width="100%">
+                            <Label text="{MaterialsModel>pages}"/>
+                        </VBox>
+                        <VBox width="100%">
+                            <Label text="{MaterialsModel>market}"/>
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+            </List>
+        </content>
+    </Page>
+
+</mvc:View>

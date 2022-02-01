@@ -1,13 +1,15 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
     "../utils/Formatter",
     "../utils/Common",
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, Formatter, Common) {
+    function (Controller, JSONModel, Filter, FilterOperator, Formatter, Common) {
         "use strict";
 
         return Controller.extend("accenture1.project1.controller.View3", {
@@ -21,6 +23,7 @@ sap.ui.define([
                 //this.getView().setModel(oCitiesModel, "CitiesModel")
                 
             },
+
             onPress:function(oEvent){
                 //var oToolsModel = this.getOwnerComponent().getModel("ToolsModel");
                 //var row = oEvent.getSource().getCells();
@@ -51,12 +54,36 @@ sap.ui.define([
    
                
             },
-            applyFilter:function(oEvent){
-                this.byId("CategoryID-combobox").getSelectedItem();
-                var selText = oEvent.getParameter("selectedItem").getText();
-                var selKey = oEvent.getParameter("selectedItem").getKey();
-             }
-            
+            onChange: function(oEvent){
+                const sSelkey = oEvent.getParameter("selectedItem").getKey();
+                const oFilter  = new Filter({
+                    path: "CategoryID",
+                    operator: FilterOperator.EQ,
+                    value1: sSelkey,
+                });
+                const oTable=this.byId("tableId");
+                oTable.getBinding("items").filter(oFilter);
+
+            },
+
+            applyFilter: function(){
+                const oSelectedItem = this.byId("CategoryID-combobox").getSelectedItem();
+                if(!oSelectedItem){
+                    return;
+                }
+                const sSelectedKey = oSelectedItem.getKey();
+               
+                const oFilter = new Filter({
+                    path: "CategoryID",
+                    operator: FilterOperator.EQ,
+                    value1: sSelectedKey,
+                });
+                const oTable=this.byId("tableId");
+                //bindeo conexion entre tabla y los resultadods
+                oTable.getBinding("items").filter(oFilter);
+
+            }
+
         });
 
     });

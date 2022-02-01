@@ -1,13 +1,12 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel",
     "../utils/Formatter",
     "../utils/Common"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel, Formatter, Common) {
+    function (Controller, Formatter, Common) {
         "use strict";
 
         return Controller.extend("accenture1.project1.controller.View4", {

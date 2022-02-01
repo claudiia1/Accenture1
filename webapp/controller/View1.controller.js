@@ -59,6 +59,11 @@ sap.ui.define([
                 Common.navigateTo(this, "RouteView3");
                 
             },
+            
+            onNavigateToView5: function(){
+                Common.navigateTo(this, "RouteView5");
+                
+            },
 
             onLanguageSpanish: function(){
                 sap.ui.getCore().getConfiguration().setLanguage("es_ES");

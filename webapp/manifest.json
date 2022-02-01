@@ -115,6 +115,13 @@
           ]
         },
         {
+            "name": "RouteView5",
+            "pattern": "RouteView5",
+            "target": [
+              "TargetView5"
+            ]
+        },
+        {
           "name": "RouteAutorization",
           "pattern": "Autorization",
           "target": [
@@ -155,8 +162,18 @@
           "clearControlAggregation": false,
           "viewId": "View4",
           "viewName": "View4"
+        },
+        
+        "TargetView5": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "View5",
+            "viewName": "View5"
         }
-      },
+     
+      
+    },
       
         
       
